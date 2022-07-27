@@ -1,7 +1,15 @@
-{{page-title "ShoppingApp"}}
-
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="container">
+  <div class="header">
+    <LinkTo @route="index">
+    <h2>
+        <em>Easy Shopping</em>
+    </h2>
+    </LinkTo>
+    <LinkTo class="cart" @route="cart">
+    Cart<i class="fa badge fa-lg" value=0>&#xf290;</i>
+    </LinkTo>
+  </div>
+  <div class="body">
+    {{outlet}}
+  </div>
+</div>
